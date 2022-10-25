@@ -1,0 +1,10 @@
+name: test-book-publishing
+channels:
+  - conda-forge
+  - default
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - jupyter-book
+  - numpy
+  - matplotlib
