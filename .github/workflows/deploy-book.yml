@@ -45,7 +45,7 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          jupyter-book build test-book
+          jupyter-book build test-book && mkdir book && cp -R test-book/_build/html/* book/.
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: '.'
+          path: 'book/'
 
       - name: Deploy to GitHub Pages
         id: deployment
